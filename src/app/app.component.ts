@@ -8,7 +8,7 @@ import { CaptionItem } from './caption-item';
 })
 export class AppComponent {
   title: string | undefined; // state variable
-  
+  imgSrc = "./assets/angular_logo.png";
 
   // type inference
   // messages = [
@@ -65,5 +65,11 @@ export class AppComponent {
 
   private getRandomInt(max: number) {
     return Math.floor(Math.random() * max);
+  }
+
+  resetClick(){
+    console.log('reset');
+    this.usedCaptionList= [];
+    this.title = this.randomCaption()?.message;
   }
 }
